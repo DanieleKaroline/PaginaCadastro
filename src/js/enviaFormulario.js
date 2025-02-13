@@ -11,9 +11,7 @@ async function validarFormulario() {
     const bairro = document.getElementById('bairro').value
     const cidade = document.getElementById('cidade').value
     const telefone = document.getElementById('telefone').value
-    const telefone_emergencia = document.getElementById('telefone_emergência').value
-    const ano_entrada = document.getElementById('ano_entrada').value
-    const semestre_entrada = document.getElementById('semestre_entrada').value
+    const telefone_emergencia = document.getElementById('telefone_emergencia').value
     const categoria = document.querySelector('input[name="categoria"]:checked')?.value
     const ocupacao = document.getElementById('ocupacao').value
     const condicao = document.getElementById('condicao').value
@@ -46,8 +44,6 @@ async function validarFormulario() {
         email,
         endereco,
         telefone,
-        ano_entrada,
-        semestre_entrada,
         categoria,
         ocupacao
     }
@@ -69,7 +65,7 @@ async function validarFormulario() {
 
         const response = await axios.post('https://servidorcadastro.onrender.com/membros', formData)
         
-        alert("acho q deu")  
+        alert("Cadastrado com sucesso!")  
         document.getElementById('meuFormulario').reset()  
     } catch (error) {
         console.error('Erro ao enviar dados:', error)

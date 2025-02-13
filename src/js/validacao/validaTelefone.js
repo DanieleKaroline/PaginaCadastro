@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const telefoneInput = document.getElementById("telefone")
-    const contatoInput = document.getElementById("telefone_emergência")
+    const contatoInput = document.getElementById("telefone_emergencia")
 
     telefoneInput.addEventListener("input", function (event) {
         let telefone = event.target.value.replace(/\D/g, "")
