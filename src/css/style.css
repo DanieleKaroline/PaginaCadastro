@@ -1,0 +1,190 @@
+body {
+    color: #8f152d; /* Altera a cor do texto para branco */
+}
+
+.form-control, .form-select {
+    max-width: 100%;
+    transition: border 0.3s, box-shadow 0.3s;
+    background-color: white;
+    color: black;
+}
+
+.form-control::placeholder, .form-select::placeholder {
+    color: black; /* Cor do texto do placeholder */
+}
+
+.form-label {
+    color: #8f152d; /* Cor do texto das labels */
+}
+
+.form-check-label {
+    color: black; /* Cor do texto das opções de radio button */
+}
+
+#concordo + .form-check-label {
+    color: #8f152d; /* Define a cor desejada */
+}
+
+.form-control:hover, .form-select:hover {
+    border-color: #ffab03;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #ffab03;
+    box-shadow: 0 0 12px rgba(255, 171, 3, 1);
+    outline: none;
+    background-color: white;
+    color: black;
+}
+
+/* Altera a cor do círculo das opções de categoria */
+.form-check-input[type="radio"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black; /* Cor da borda */
+    background-color: white;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-check-input[type="radio"]:checked {
+    background-color: #ffab03; /* Cor de fundo quando selecionado */
+    border-color: #ffab03;
+}
+
+.form-check-input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white; /* Cor do ponto interno quando selecionado */
+}
+
+/* Alterando a cor da bolinha quando o mouse passa sobre */
+.form-check-input[type="radio"]:hover {
+    border-color: #ffab03;
+    box-shadow: 0 0 12px rgba(255, 171, 3, 1);
+}
+
+@media (min-width: 576px) {
+    .form-control, .form-select {
+        max-width: 400px;
+    }
+}
+
+
+/* Estilo da caixa do formulário */
+.form-box {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 2rem;
+    max-height: 510px; /* Definindo altura fixa */
+    overflow-y: auto; /* Habilitando rolagem */
+    background-color: white;
+}
+
+.form-select {
+    -webkit-appearance: none;  /* Remove a aparência padrão da setinha no Chrome/Safari */
+    -moz-appearance: none;     /* Remove a aparência padrão da setinha no Firefox */
+    appearance: none;          /* Remove a aparência padrão da setinha no resto dos navegadores */
+    background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"%3E%3Cpath fill="none" stroke="%23000000" stroke-width="1" d="M3 4l3 3 3-3"%3E%3C/path%3E%3C/svg%3E'); /* Setinha personalizada */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px; /* Ajusta o espaço para a setinha */
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px; /* Deixa as caixas de seleção arredondadas */
+    border: 1px solid black; /* Cor da borda */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.form-check-input:hover {
+    border-color: #ffab03; /* Cor da borda ao passar o mouse */
+    box-shadow: 0 0 12px rgba(255, 171, 3, 1);
+    
+}
+
+.form-check-input:checked {
+    border-color: #ffab03; /* Cor da borda quando selecionado */
+    background-color: #ffab03; /* Cor de fundo quando selecionado */
+}
+
+.form-check-input:checked::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white; /* Cor da bolinha interna */
+}
+
+/* Personalizando a barra de rolagem */
+.form-box::-webkit-scrollbar {
+    width: 8px;
+}
+
+.form-box::-webkit-scrollbar-thumb {
+    background-color: #ffab03;
+    border-radius: 4px;
+    border: 2px solid #ffffff;
+}
+
+.form-box::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 4px;
+}
+
+/* Estilizando os botões */
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-custom {
+    min-width: 120px;
+    background-color: white; /* Cor de fundo verde (altere para a cor desejada) */
+    color: #ffab03; /* Cor do texto (branco) */
+    border: 3px solid #ffab03; /* Borda verde */
+    border-radius: 5px; /* Bordas arredondadas */
+}
+
+.btn-custom:hover {
+    background-color: #ffab03; /* Cor do botão ao passar o mouse (altere conforme desejado) */
+    border-color: #ffab03;
+    box-shadow: 0 0 12px rgba(255, 171, 3, 1);
+}
+
+.btn-secondary.btn-custom {
+    background-color: white; /* Cor de fundo vermelho para o botão "Limpar" */
+    border: 3px solid #8f152d;
+    color: #8f152d;
+}
+
+.btn-secondary.btn-custom:hover {
+    background-color: #8f152d; /* Cor ao passar o mouse no "Limpar" */
+    border-color: #8f152d;
+    box-shadow: 0 0 12px rgb(143, 21, 45, 1);
+    color: white;
+}
+
+.link-termos {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.link-termos:hover {
+    color: #ffab03; /* Nova cor ao passar o mouse */
+}
