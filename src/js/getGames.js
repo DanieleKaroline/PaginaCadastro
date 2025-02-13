@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 
     try {
-        const response = await axios.get("http://localhost:3000/games");
+        const response = await axios.get("https://servidorcadastro.onrender.com/games");
         criarCheckbox("games-container", response.data);
     } catch (error) {
         console.error("Erro ao carregar esportes:", error);

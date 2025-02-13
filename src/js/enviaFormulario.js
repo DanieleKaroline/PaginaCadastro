@@ -69,7 +69,7 @@ async function validarFormulario() {
 
     try {
 
-        const response = await axios.post('http://localhost:3000/membros', formData);
+        const response = await axios.post('https://servidorcadastro.onrender.com/membros', formData);
         
         alert("acho q deu");  // Exibe a resposta do servidor
         document.getElementById('meuFormulario').reset();  // Limpa o formulário
