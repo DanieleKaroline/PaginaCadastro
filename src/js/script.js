@@ -1,5 +1,5 @@
 function limparFormulario() {
-    document.getElementById("meuFormulario").reset()
+    document.getElementById("formulario").reset()
 }
 
 function validarFormulario() {

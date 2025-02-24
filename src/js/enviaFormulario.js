@@ -66,7 +66,7 @@ async function validarFormulario() {
         const response = await axios.post('https://servidorcadastro.onrender.com/membros', formData)
         
         alert("Cadastrado com sucesso!")  
-        document.getElementById('meuFormulario').reset()  
+        document.getElementById('formulario').reset()  
     } catch (error) {
         console.error('Erro ao enviar dados:', error)
         alert('Ocorreu um erro. Tente novamente.')
@@ -77,5 +77,5 @@ async function validarFormulario() {
 }
 
 function limparFormulario() {
-    document.getElementById('meuFormulario').reset()  
+    document.getElementById('formulario').reset()  
 }
