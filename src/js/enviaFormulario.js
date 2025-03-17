@@ -1,4 +1,5 @@
-async function validarFormulario() {
+async function validarFormulario(event) {
+    event.preventDefault()
     
     const nome = document.getElementById('nome').value
     const cpf = document.getElementById('cpf').value
@@ -65,8 +66,9 @@ async function validarFormulario() {
 
         const response = await axios.post('https://servidorcadastro.onrender.com/membros', formData)
         
-        alert("Cadastrado com sucesso!")  
-        document.getElementById('formulario').reset()  
+        localStorage.setItem('dadosUsuario', JSON.stringify(response.data));
+
+        window.location.href = "src/pages/card.html"  
     } catch (error) {
         console.error('Erro ao enviar dados:', error)
         alert('Ocorreu um erro. Tente novamente.')

@@ -15,70 +15,70 @@
             <div class="col-md-6">
                 <div class="form-box">
                     <h2 class="mb-4 text-center">Ficha de Inscrição</h2>
-                    <form id="formulario" onsubmit="return validarFormulario()">
+                    <form id="formulario" onsubmit="return validarFormulario(event)">
                         <div class="mb-3">
-                            <label for="nome" class="form-label">Nome <span class="text-danger">*</span></label>
+                            <label for="nome" class="form-label">Nome<span class="text-danger">*</span></label>
                             <input type="text" class="form-control" id="nome" required>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label for="cpf" class="form-label">CPF <span class="text-danger">*</span></label>
+                                <label for="cpf" class="form-label">CPF<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="cpf" required>
                             </div>
                             <div class="col-md-6 mb-3">
-                                <label for="matricula" class="form-label">Matrícula <span class="text-danger">*</span></label>
+                                <label for="matricula" class="form-label">Matrícula<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="matricula" required>
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">E-mail <span class="text-danger">*</span></label>
+                        <div class="mb-5">
+                            <label for="email" class="form-label">E-mail<span class="text-danger">*</span></label>
                             <input type="email" class="form-control" id="email" required>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-3 mb-3">
+                            <div class="col-md-4 mb-3">
                                 <label for="cep" class="form-label">CEP</label>
                                 <input type="text" class="form-control" id="cep">
                             </div>
-                            <div class="col-md-7 mb-3">
-                                <label for="rua" class="form-label">Rua <span class="text-danger">*</span></label>
+                            <div class="col-md-8 mb-3">
+                                <label for="rua" class="form-label">Rua<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="rua" required>
                             </div>
-                            <div class="col-md-2 mb-3">
-                                <label for="numero" class="form-label">Número <span class="text-danger">*</span></label>
+                            <div class="col-md-3 mb-3">
+                                <label for="numero" class="form-label">Nº<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="numero" required>
                             </div>
-                        </div>
-                        <div class="col-md-10 mb-3">
-                            <label for="complemento" class="form-label">Complemento</label>
-                            <input type="text" class="form-control" id="complemento">
+                            <div class="col-md-9 mb-3">
+                                <label for="complemento" class="form-label">Complemento</label>
+                                <input type="text" class="form-control" id="complemento">
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-md-6 mb-3">
-                                <label for="bairro" class="form-label">Bairro <span class="text-danger">*</span></label>
+                                <label for="bairro" class="form-label">Bairro<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="bairro" required>
                             </div>
                             <div class="col-md-6 mb-5">
-                                <label for="cidade" class="form-label">Cidade <span class="text-danger">*</span></label>
+                                <label for="cidade" class="form-label">Cidade<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="cidade" required>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6 mb-5">
-                                <label for="telefone" class="form-label">Telefone <span class="text-danger">*</span></label>
+                            <div class="col-md-6 mb-3">
+                                <label for="telefone" class="form-label">Telefone<span class="text-danger">*</span></label>
                                 <input type="text" class="form-control" id="telefone" required>
                             </div>
                             <div class="col-md-6 mb-5">
-                                <label for="telefone_emergencia" class="form-label">Contato de emergência</label>
+                                <label for="telefone_emergencia" class="form-label">Tel. emergência</label>
                                 <input type="text" class="form-control" id="telefone_emergencia">
                             </div>
                         </div>
 
-                        <div class="row mb-3">
-                            <div class="col-md-7">
-                                <label class="form-label">Categoria <span class="text-danger">*</span></label>
-                                <div class="d-flex gap-5">
+                        <div class="row mb-5">
+                            <div class="col-md-6 mb-4">
+                                <label class="form-label">Categoria<span class="text-danger">*</span></label>
+                                <div class="d-flex flex-wrap gap-3">
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="categoria" id="discente" value="discente" required>
                                         <label class="form-check-label" for="discente">Aluno</label>
@@ -89,8 +89,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-5">
-                                <label for="ocupacao" class="form-label">Desejo participar como <span class="text-danger">*</span></label>
+                            <div class="col-md-6">
+                                <label for="ocupacao" class="form-label">Participar como<span class="text-danger">*</span></label>
                                 <select class="form-select" id="ocupacao" required>
                                     <option value="">Selecione...</option>
                                     <option value="atleta">Atleta</option>
@@ -99,23 +99,23 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-5">
                             <label for="condicao" class="form-label">Alergias ou condições especiais</label>
                             <input type="text" class="form-control" id="condicao">
                         </div>
-                        <div class="row mb-5" id="esportes_section" style="display: none;">
-                            <div class="col-md-6">
+                        <div class="row" id="esportes_section" style="display: none;">
+                            <div class="col-md-6 mb-5">
                                 <label class="form-label">Esportes <span class="text-danger">*</span></label>
                                 <div id="esportes-container" class="d-flex gap-4 flex-wrap"></div>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-6 mb-5">
                                 <label class="form-label">E-sports <span class="text-danger">*</span></label>
                                 <div id="games-container" class="d-flex gap-4 flex-wrap"></div>
                             </div>
                         </div>
                         <div class="mb-3 form-check">
                             <input type="checkbox" class="form-check-input" id="concordo" required>
-                            <label class="form-check-label" for="concordo">Li e concordo com o Código de Conduta da AAACCN</label>
+                            <label class="form-check-label" for="concordo">Li e concordo com o Código de Conduta da AAACCN<span class="text-danger">*</span></label>
                             <br>
                             <a href="https://github.com/aaaccnavegadores/codigo_de_conduta/blob/main/codigo_de_conduta_aaaccn.pdf" target="_blank" class="link-termos">Clique aqui para acessar o Código de Conduta</a>
                         </div>
