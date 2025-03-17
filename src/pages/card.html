@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dc1dcxnpt/image/upload/v1740420974/Nave/favicon.png">
+    <title>Cartão de Inscrição</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/css/card.css">
+    <script defer src="/src/js/card.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Cartão da Nave</h2>
+        <div id="cartao" class="d-flex p-4 mt-4 shadow">
+            <div class="me-4">
+                    <h4 id="nome"></h4>
+                    <div class="linha"></div>
+                    <p><strong>Número do Sócio:</strong> <span id="inscricao"></span></p>
+                    
+                    <p><strong>Categoria:</strong> <span id="categoria"></span></p>
+                    <p><strong>Ocupação:</strong> <span id="ocupacao"></span></p>
+            </div>
+            <img id="foto" src="https://res.cloudinary.com/dc1dcxnpt/image/upload/v1742221162/Nave/logo.png" alt="Navegadores">
+        </div>
+        <div class="nav-butons">
+            <button id="baixar-cartao" class="btn btn-success btn-custom">Download</button>
+            <a href="/" class="btn btn-primary btn-custom">Voltar</a>
+        </div>
+    </div>
+</body>
+</html>

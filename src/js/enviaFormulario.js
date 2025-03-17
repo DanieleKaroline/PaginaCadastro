@@ -68,7 +68,7 @@ async function validarFormulario(event) {
         
         localStorage.setItem('dadosUsuario', JSON.stringify(response.data));
 
-        window.location.href = "src/pages/card.html"  
+        window.location.href = "/card"  
     } catch (error) {
         console.error('Erro ao enviar dados:', error)
         alert('Ocorreu um erro. Tente novamente.')

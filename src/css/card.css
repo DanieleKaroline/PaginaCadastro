@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'Nome Font';
+    src: url('../assets/fonts/otf/BlinktwiceRegular-4BvE4.otf') format('truetype');
+}
+@font-face {
+    font-family: 'Labels Font';
+    src: url('../assets/fonts/ttf/MochiyPopOne-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Infos Font';
+    src: url('../assets/fonts/ttf/Sebian.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Body Font';
+    src: url('../assets/fonts/ttf/the-last-shuriken-the-last-shuriken-700.ttf') format('truetype');
+}
+
+body {
+    background-color: #390712;
+    font-family: 'Body Font', sans-serif;
+    color: #ffab03;
+}
+
+#cartao {
+    background: url('https://res.cloudinary.com/dc1dcxnpt/image/upload/v1742238790/Nave/cartao.png') no-repeat center center;
+    background-size: 100% 100%; /* Primeiro valor (largura), segundo valor (altura) */
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid #ffab03;
+    border-radius: 10px;
+    width: 680px;
+    margin: auto;
+    padding: 20px;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: flex-start;
+}
+
+#cartao h4 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-family: 'Nome Font', sans-serif;
+    text-align: left;
+     margin-left: 0; /* Garante que não tenha margem à esquerda */
+    padding-left: 0;
+}
+
+.linha {
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+#foto {
+    width: 275px;
+    height: 275px;
+    object-fit: cover;
+    margin-left: 15px;
+}
+
+#cartao p {
+    font-size: 13px;
+    margin-bottom: 30px;
+    color: white;
+    margin-left: 20px;
+    font-family: 'Infos Font', sans-serif;
+    letter-spacing: 1px
+}
+#cartao strong {
+    font-family: 'Labels Font', sans-serif;
+}
+
+.info {
+    flex: 1;
+}
+
+.nav-butons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.btn-custom {
+    min-width: 120px;
+    background-color: white;
+    color: #ffab03;
+    border: 3px solid #ffab03;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    background-color: #ffab03;
+    border-color: #ffab03;
+    box-shadow: 0 0 12px rgba(255, 171, 3, 1);
+}
+
+.btn-primary.btn-custom {
+    background-color: white;
+    border: 3px solid #8f152d;
+    color: #8f152d;
+}
+
+.btn-primary.btn-custom:hover {
+    background-color: #8f152d;
+    border-color: #8f152d;
+    box-shadow: 0 0 12px rgb(143, 21, 45, 1);
+    color: white;
+}
