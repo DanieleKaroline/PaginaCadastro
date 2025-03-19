@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="https://res.cloudinary.com/dc1dcxnpt/image/upload/v1740420974/Nave/favicon.png">
+    <title>Navegadores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/src/css/style.css" />
+</head>
+<body>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="form-box">
+                    <h2 class="mb-4 text-center">Atualizar Cadastro</h2>
+
+                    <div class="mb-3">
+                        <label for="search" class="form-label">Buscar Cadastro</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="search" placeholder="Digite a matrícula">
+                            <button class="lupa btn btn-primary" type="button" onclick="buscarCadastro()">
+                                <i class="bi bi-search"></i>
+                            </button>                            
+                        </div>
+                    </div>
+                    
+                    <div id="formulario-container" style="display: none;">
+                        <form id="formulario" onsubmit="return atualizaMembro(event)">
+                            <input type="hidden" id="id">
+                            <input type="hidden" id="inscricao">
+
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome<span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="nome" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="cpf" class="form-label">CPF<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="cpf" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="matricula" class="form-label">Matrícula<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="matricula" required>
+                                </div>
+                            </div>
+                            <div class="mb-5">
+                                <label for="email" class="form-label">E-mail<span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <label for="cep" class="form-label">CEP</label>
+                                    <input type="text" class="form-control" id="cep">
+                                </div>
+                                <div class="col-md-8 mb-3">
+                                    <label for="rua" class="form-label">Rua<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="rua" required>
+                                </div>
+                                <div class="col-md-3 mb-3">
+                                    <label for="numero" class="form-label">Nº<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="numero" required>
+                                </div>
+                                <div class="col-md-9 mb-3">
+                                    <label for="complemento" class="form-label">Complemento</label>
+                                    <input type="text" class="form-control" id="complemento">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="bairro" class="form-label">Bairro<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="bairro" required>
+                                </div>
+                                <div class="col-md-6 mb-5">
+                                    <label for="cidade" class="form-label">Cidade<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="cidade" required>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="telefone" class="form-label">Telefone<span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="telefone" required>
+                                </div>
+                                <div class="col-md-6 mb-5">
+                                    <label for="telefone_emergencia" class="form-label">Tel. emergência</label>
+                                    <input type="text" class="form-control" id="telefone_emergencia">
+                                </div>
+                            </div>
+
+                            <div class="mb-5">
+                                <label for="condicao" class="form-label">Alergias ou condições especiais</label>
+                                <input type="text" class="form-control" id="condicao">
+                            </div>
+                            
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="concordo" required>
+                                <label class="form-check-label" for="concordo">Li e concordo com o Código de Conduta da AAACCN<span class="text-danger">*</span></label>
+                                <br>
+                                <a href="https://github.com/aaaccnavegadores/codigo_de_conduta/blob/main/codigo_de_conduta_aaaccn.pdf" target="_blank" class="link-termos">Clique aqui para acessar o Código de Conduta</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" form="formulario" class="btn btn-primary btn-custom">Enviar</button>
+                    <button type="button" class="btn btn-secondary btn-custom" onclick="limparFormulario()">Limpar</button>
+                </div>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/src/js/atualizaCadastro.js"></script>
+    <script src="/src/js/validacao/validaCPF.js"></script>
+    <script src="/src/js/validacao/validaTelefone.js"></script>
+    <script src="/src/js/validacao/validaCEP.js"></script>
+    <script src="/src/js/validacao/validaMatricula.js"></script>
+</body>
+</html>

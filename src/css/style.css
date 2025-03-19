@@ -210,3 +210,24 @@ body {
 .link-termos:hover {
     color: #ffab03;
 }
+
+.lupa {
+    background-color: white; 
+    border: 3px solid #ffab03;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.lupa:hover {
+    background-color: #ffab03; 
+    border: 3px solid #ffab03;
+    box-shadow: 0 0 12px rgba(255, 171, 3, 1);
+}
+
+.lupa i {
+    color: #ffab03; 
+    transition: color 0.3s;
+}
+
+.lupa:hover i {
+    color: white;
+}
