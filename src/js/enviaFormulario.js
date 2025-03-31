@@ -1,7 +1,8 @@
 async function validarFormulario(event) {
     event.preventDefault()
     
-    const nome = document.getElementById('nome').value
+    const nome = document.getElementById('nome').value.split(" ")
+        .map(palavra => palavra.length > 3 ? palavra.charAt(0).toUpperCase() + palavra.slice(1) : palavra).join(" ")
     const cpf = document.getElementById('cpf').value
     const matricula = document.getElementById('matricula').value
     const email = document.getElementById('email').value
@@ -18,14 +19,10 @@ async function validarFormulario(event) {
     const condicao = document.getElementById('condicao').value
 
     
-    const esportesSelecionados = Array.from(document.querySelectorAll('#esportes-container input[type="checkbox"]:checked'))
-        .map(checkbox => checkbox.value)
+    const esportesSelecionados = Array.from(document.querySelectorAll('#esportes-container input[type="checkbox"]:checked')).map(checkbox => checkbox.value)
 
     
-    const gamesSelecionados = Array.from(document.querySelectorAll('#games-container input[type="checkbox"]:checked'))
-        .map(checkbox => checkbox.value)
-
-    console.log(esportesSelecionados)
+    const gamesSelecionados = Array.from(document.querySelectorAll('#games-container input[type="checkbox"]:checked')).map(checkbox => checkbox.value)
 
     const endereco = {
         rua,

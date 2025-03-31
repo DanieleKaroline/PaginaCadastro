@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Title Font';
+    src: url('../assets/fonts/ttf/the-last-shuriken-the-last-shuriken-700.ttf') format('truetype');
+}
+
 body {
     color: #8f152d;
     background-image: url('https://res.cloudinary.com/dc1dcxnpt/image/upload/v1742238688/Nave/inscricao_fundo.png');
@@ -13,6 +18,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h2 {
+    font-family: 'Title Font', sans-serif;
 }
 
 .form-control, .form-select {
@@ -172,6 +181,7 @@ body {
     justify-content: center;
     gap: 10px;
     margin-top: 15px;
+    font-family: 'Title Font', sans-serif;
 }
 
 .btn-custom {
@@ -207,7 +217,18 @@ body {
     transition: color 0.3s ease-in-out;
 }
 
+.link-atualizar {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    font-family: 'Title Font', sans-serif;
+}
+
 .link-termos:hover {
+    color: #ffab03;
+}
+
+.link-atualizar:hover {
     color: #ffab03;
 }
 
